@@ -1,0 +1,80 @@
+{
+  "projectConfig": {
+    "name": "client-api-example",
+    "version": "1.0.0",
+    "description": "test description",
+    "author": "John Doe",
+    "entryFile": "index.js"
+  },
+  "environment": {
+    "target": {
+      "envName": "APP_API_URL",
+      "value": "https://api.mysaledev.com/"
+    },
+    "baseResourcePath": {
+      "envName": "BASE_RESOURCE_PATH",
+      "value": "/"
+    },
+    "nonProxyPath": {
+      "envName": "NON_PROXY_PATH",
+      "value": "/mobile"
+    },
+    "port": {
+      "envName": "PORT",
+      "value": 8080
+    }
+  },
+  "routes": [{
+    "isProxy": true,
+    "method": "post",
+    "name": "GetPublicAppSettingsProxy",
+    "routeUrl": "/public/v3.16/api.asmx/GetPublicAppSettings",
+    "implPath": "impl",
+    "filename": "GetPublicAppSettingsProxy.js",
+    "swaggerConfig": {
+      "method": "post",
+      "description": "Proxy endpoint for querying products by search model",
+      "produces": "application/json",
+      "parameters": [{
+        "name": "CountryID",
+        "props": [{
+          "description": "query string"
+        }, {
+          "required": true
+        }, {
+          "type": "string"
+        }]
+      }],
+      "responses": [{
+        "status": 200,
+        "description": "OK"
+      }]
+    }
+  }, {
+    "isProxy": false,
+    "method": "post",
+    "name": "GetPublicAppSettingsNonProxy",
+    "routeUrl": "/public/v3.16/api.asmx/GetPublicAppSettings",
+    "implPath": "impl",
+    "filename": "GetPublicAppSettingsNonProxy.js",
+    "swaggerConfig": {
+      "method": "post",
+      "description": "Proxy endpoint for querying products by search model",
+      "produces": "application/json",
+      "parameters": [{
+        "name": "CountryID",
+        "props": [{
+          "description": "query string"
+        }, {
+          "required": true
+        }, {
+          "type": "string"
+        }]
+      }],
+      "responses": [{
+        "status": 200,
+        "description": "OK"
+      }]
+    }
+  }]
+}
