@@ -1,7 +1,7 @@
 'use strict';
 
-const GetPublicAppSettingsProxy = require('./impl/GetPublicAppSettingsProxy.js');
-const GetPublicAppSettingsNonProxy = require('./impl/GetPublicAppSettingsNonProxy.js');
+const GetPublicAppSettingsProxy = require('./routes/GetPublicAppSettingsProxy');
+const GetPublicAppSettingsNonProxy = require('./routes/GetPublicAppSettingsNonProxy');
 
 const routes = {
   init: function(server, proxy) {

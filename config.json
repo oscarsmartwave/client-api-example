@@ -24,7 +24,10 @@
       "value": 8080
     }
   },
-  "routes": [{
+  "routesConfig": {
+    "dirName": "routes",
+    "implDirName": "impl",
+    "routes": [{
     "isProxy": true,
     "method": "post",
     "name": "GetPublicAppSettingsProxy",
@@ -36,7 +39,7 @@
       "description": "Proxy endpoint for querying products by search model",
       "produces": "application/json",
       "parameters": [{
-        "name": "CountryID",
+        "name": "countryID",
         "props": [{
           "description": "query string"
         }, {
@@ -62,7 +65,7 @@
       "description": "Proxy endpoint for querying products by search model",
       "produces": "application/json",
       "parameters": [{
-        "name": "CountryID",
+        "name": "countryID",
         "props": [{
           "description": "query string"
         }, {
@@ -77,4 +80,5 @@
       }]
     }
   }]
+  }
 }

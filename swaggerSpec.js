@@ -9,7 +9,7 @@ var options = {
       version: "1.0.0", // Version (required)
     },
   },
-  apis: ['./impl/GetPublicAppSettingsProxy.js','./impl/GetPublicAppSettingsNonProxy.js'], // Path to the API docs
+  apis: ['./routes/GetPublicAppSettingsProxy','./routes/GetPublicAppSettingsNonProxy'], // Path to the API docs
 };
 
 // Initialize swagger-jsdoc -> returns validated swagger spec in json format
